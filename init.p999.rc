@@ -95,10 +95,12 @@ loglevel 3
     write /proc/sys/kernel/panic 1
     write /proc/sys/kernel/hung_task_timeout_secs 0
     write /proc/cpu/alignment 4
-    write /proc/sys/kernel/sched_latency_ns 10000000
+    write /proc/sys/kernel/sched_latency_ns 600000
     write /proc/sys/kernel/sched_wakeup_granularity_ns 2000000
+    write /proc/sys/kernel/sched_min_granularity_ns 400000
     write /proc/sys/kernel/sched_compat_yield 1
     write /proc/sys/kernel/sched_child_runs_first 0
+    write /proc/sys/kernel/sched_features 24188
 
 # Create cgroup mount points for process groups
     mkdir /dev/cpuctl
@@ -568,6 +570,10 @@ service wpa_supplicant /system/bin/wpa_supplicant -Dwext -iwlan0 -c/data/misc/wi
     oneshot
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -BKA wlan0  # LGE_AUTO_IP - enable IPv4LL & ARP (DLNA, 2010.10.19)
+    disabled
+    oneshot
+
+service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
