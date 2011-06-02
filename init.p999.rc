@@ -293,6 +293,10 @@ on boot
 # Sensor MPU3050
     setprop ro.hardware MOTION
 
+    # Increase readahead buffers on MMC devices
+    write /sys/block/mmcblk0/bdi/read_ahead_kb 1024
+    write /sys/block/mmcblk1/bdi/read_ahead_kb 1024
+
 # Write value must be consistent with the above properties.
 # Note that the driver only supports 6 slots, so we have HOME_APP at the
 # same memory level as services.
@@ -510,6 +514,10 @@ service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-sys
     onrestart write /sys/android_power/request_state wake
     onrestart write /sys/power/state on
     onrestart restart media
+
+service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
+    disabled
+    oneshot
 
 service media /system/bin/mediaserver
     user media
