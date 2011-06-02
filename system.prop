@@ -17,7 +17,7 @@ dalvik.vm.heapsize=36m
 dalvik.vm.dexopt-flags=m=y,u=n
 
 # Mount the internal SD card, too
-ro.additionalmounts=/mnt/sdcard/_InternalSD
+ro.additionalmounts=/mnt/emmc
 
 # GSM, WCDMA preferred
 # This appears to be causing "Unknown" network type
