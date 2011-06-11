@@ -124,6 +124,10 @@ cp system/lib/libnvwsi.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 cp system/lib/libaudio.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 cp system/lib/libaudiopolicy.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 cp system/lib/libaudio.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+cp system/lib/liblgeswcodecs.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+cp system/lib/liblgemmevrc.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+cp system/lib/liblgemmqcelp.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+cp system/lib/liblgemmec3.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 
 # Wi-Fi Calling
 cp system/app/Kineto.apk ../../../vendor/$VENDOR/$DEVICE/proprietary/app
