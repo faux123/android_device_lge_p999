@@ -568,6 +568,12 @@ service opush /system/bin/sdptool add --channel=12 OPUSH
     disabled
     oneshot
 
+service map /system/bin/sdptool add --channel=16 MAS
+    user bluetooth
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
 service pbap /system/bin/sdptool add --channel=19 PBAP
     user bluetooth
     group bluetooth net_bt_admin
