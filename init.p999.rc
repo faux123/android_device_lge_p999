@@ -369,6 +369,12 @@ on boot
     chmod 0777 /etc/ppp/ip-up
     chown root radio /etc/ppp/ip-up
 
+# light controls
+    chown system system /sys/class/leds/buttonpanel/brightness
+    chown system system /sys/class/leds/buttonpanel/enable
+    chown system system /sys/class/leds/buttonpanel/blink
+
+
 # 20101107, sglee76@lge.com, FOTA [START]
     mkdir /data/fota 0777 system system
     chown system system /data/fota
