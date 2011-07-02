@@ -22,3 +22,7 @@ ro.additionalmounts=/mnt/emmc
 # GSM, WCDMA preferred
 # This appears to be causing "Unknown" network type
 #ro.telephony.default_network=0
+
+#mxdversion
+ro.mxdversion=CyanogenMod-P999-AOSP
+

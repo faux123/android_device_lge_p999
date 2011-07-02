@@ -369,12 +369,6 @@ on boot
     chmod 0777 /etc/ppp/ip-up
     chown root radio /etc/ppp/ip-up
 
-# light controls
-    chown system system /sys/class/leds/buttonpanel/brightness
-    chown system system /sys/class/leds/buttonpanel/enable
-    chown system system /sys/class/leds/buttonpanel/blink
-
-
 # 20101107, sglee76@lge.com, FOTA [START]
     mkdir /data/fota 0777 system system
     chown system system /data/fota
@@ -398,6 +392,11 @@ on boot
     chown system system /sys/devices/platform/tegra_gyro_accel/bootcomplete
     chown system system /sys/devices/platform/star_aat2870.0/lsensor_onoff
     chown system system /sys/devices/platform/star_aat2870.0/alc
+
+# light controls
+    chown system system /sys/class/leds/buttonpanel/brightness
+    chown system system /sys/class/leds/buttonpanel/enable
+    chown system system /sys/class/leds/buttonpanel/blink
 
 # Define TCP buffer sizes for various networks
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
