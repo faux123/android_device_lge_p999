@@ -82,6 +82,9 @@ cp system/bin/nvddk_audiofx_transport.axf ../../../vendor/$VENDOR/$DEVICE/propri
 cp system/bin/nvddk_audiofx_core.axf ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 cp system/bin/hdmid ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 cp system/bin/bridgeutil ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+cp system/bin/rzscontrol ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+cp system/bin/swapon ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+cp system/bin/swap_enable.sh ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 cp system/lib/libril.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 cp system/lib/libnvos.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 cp system/lib/libnvrm.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
